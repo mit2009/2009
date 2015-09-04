@@ -161,6 +161,19 @@
   cursor: pointer;
 }
 
+.plane-window-color {
+  width: 60px;
+  height: 10px;
+  top: 42px;
+  left: 60px;    
+  margin: 0 !important;
+  -webkit-transform: rotate(-20deg); /* Safari */
+  transform: rotate(-20deg);
+  position: absolute;
+  animation: planeinwindow 2s 1 ease-out;
+  -webkit-animation: planeinwindow 2s 1 ease-out;
+}
+
 .cave {
   width: 180px;
   height: 150px;
@@ -828,6 +841,28 @@
     100% {
       top: 12px;
       left: 30px;
+    }
+}
+
+@-webkit-keyframes planeinwindow {
+    0% {
+      top: 60px;
+      left: -150px;
+    }
+    100% {
+      top: 42px;
+      left: 60px;
+    }
+}
+
+@keyframes planeinwindow {
+    0% {
+      top: 60px;
+      left: -150px;
+    }
+    100% {
+      top: 42px;
+      left: 60px;
     }
 }
 

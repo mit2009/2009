@@ -14,6 +14,7 @@ var banner_markup = '<div class="vertical-background-top"></div> \
     <div class="cloud cloud2"></div> \
     <div class="cloud cloud3"></div> \
     <div class="cloud cloud4"></div> \
+    <div class="f"><div class="plane-window-color"></div></div> \
     <div class="plane"></div> \
     <!-- \
     <div class="photo1"></div> \

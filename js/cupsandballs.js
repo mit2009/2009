@@ -44,6 +44,24 @@ function zero() {
   $('.c3').css({top: 60, left: 110});
 }
 
+function getPlaneWindowColor() {
+  $.get(url + '/highscore', function(data) {
+    planeWindowColor = data.currentColor;
+    updateWindowColor(data.currentColor);
+  });
+}
+
+function updateWindowColor(color) {
+  $pwc = $('.plane-window-color')
+  if (color) {
+    $pwc.css('backgroundColor', '')
+    $pwc.removeClass();
+    $pwc.addClass('plane-window-color f '+ color);
+  } else {
+    $pwc.css('backgroundColor', '#333')
+  }
+}
+
 function showUnderCup(cup, s) {
   $cup = $('.c' + cup)
   runSequence($cup, r1.slice(0), s)
@@ -279,7 +297,8 @@ function sendHighScore(color) {
     color: color
   }
   $.get(url + '/markhighscore', data, function(data) {
-    console.log(data);
+    console.log('Congratulations! Although if you\'re reading this, I might be concerned...');
+    updateWindowColor(color);
   });
 }
 
@@ -329,6 +348,7 @@ function addListeners() {
 }
 
 function initCupsAndBalls() {
+  getPlaneWindowColor();
   addListeners();
   zero();
 }
