@@ -1,0 +1,9 @@
+
+.content, .right-container {
+  left: 0 !important;
+  margin-left: 0;
+}
+
+.vertical-banner {
+  display: none !important;
+}
