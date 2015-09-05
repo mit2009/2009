@@ -202,6 +202,8 @@ body, html {
 */
 .class-name {
   margin-top: 30px; }
+  .class-name a:hover {
+    opacity: 0.8; }
   .class-name img {
     width: 100%;
     max-width: 420px; }
@@ -210,6 +212,8 @@ body, html {
   margin-top: 30px;
   vertical-align: top;
   display: inline-block; }
+  .class-name-small a:hover {
+    opacity: 0.8; }
   .class-name-small img {
     display: block;
     width: 300px; }

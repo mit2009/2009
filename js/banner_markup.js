@@ -16,19 +16,15 @@ var banner_markup = '<div class="vertical-background-top"></div> \
     <div class="cloud cloud4"></div> \
     <div class="f"><div class="plane-window-color"></div></div> \
     <div class="plane"></div> \
-    <!-- \
     <div class="photo1"></div> \
     <div class="photo2"></div> \
-    --> \
     <div class="vertical-cover"></div> \
     <div class="owl"><div class="eyesblink"></div></div> \
     <div class="hut"></div> \
     <div class="treehole"></div> \
     <div class="fish"></div> \
-    <!-- \
     <div class="photo3"></div> \
     <div class="photo4"></div> \
-    --> \
     <div class="vertical-cover2"></div> \
     <div class="minecart"></div> \
     <div class="cage"></div> \
@@ -64,6 +60,7 @@ var banner_markup = '<div class="vertical-background-top"></div> \
       <div class="lb1 lvd"></div> \
       <div class="lb2 lvd"></div> \
     </div> \
+    <div class="photo5"></div> \
     <div class="cups-container"> \
       <div class="new-highscore-container"> \
         <div class="new-highscore-title">New Highscore!!!</div> \

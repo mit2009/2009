@@ -268,6 +268,10 @@ body, html {
 .class-name {
   margin-top: 30px;
 
+  a:hover {
+    opacity: 0.8;
+  }
+
   img {
     width: 100%;
     max-width: 420px;
@@ -278,6 +282,9 @@ body, html {
   margin-top: 30px;
   vertical-align: top;
   display: inline-block;
+  a:hover {
+    opacity: 0.8;
+  }
   img {
     display: block;
     width: 300px;
