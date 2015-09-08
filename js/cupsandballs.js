@@ -36,6 +36,7 @@ var key = '';
 var timer = 0;
 var countOutTimer;
 var classHighscore = 0;
+var gameOnline = false;
 
 // MOVEMENT FUNCTIONS
 function zero() {
@@ -48,12 +49,17 @@ function getPlaneWindowColor() {
   $.get(url + '/highscore', function(data) {
     planeWindowColor = data.currentColor;
     updateWindowColor(data.currentColor);
+    gameOnline = true;
+  }).fail(function() {
+    updateWindowColor('default');
   });
 }
 
 function updateWindowColor(color) {
   $pwc = $('.plane-window-color')
-  if (color) {
+  if (color == 'default') {
+    $pwc.css('backgroundColor', '#333')
+  } else if (color) {
     $pwc.css('backgroundColor', '')
     $pwc.removeClass();
     $pwc.addClass('plane-window-color f '+ color);
@@ -299,7 +305,7 @@ function sendHighScore(color) {
   $.get(url + '/markhighscore', data, function(data) {
     console.log('Congratulations! Although if you\'re reading this, I might be concerned...');
     updateWindowColor(color);
-  });
+  })
 }
 
 function addListeners() {

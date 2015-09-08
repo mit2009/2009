@@ -83,7 +83,7 @@ function addBannerListeners() {
 
   $('#vertical-banner').on('click', '.photo1', function(e) {
     retractPhotos();
-    if (e.pageY < 180 && e.pageY > 130) {
+    if (e.pageY < 180 && e.pageY > 130 && gameOnline) {
       $('.cups-container').fadeIn();
     }
     return false;
@@ -100,7 +100,8 @@ function addBannerListeners() {
 
   $('#vertical-banner').on('click', function(e) {
     retractPhotos();
-    if (e.pageY > 643 && e.pageY < 681) {
+    console.log(gameOnline);
+    if (e.pageY > 643 && e.pageY < 681 && gameOnline) {
       $('.cups-container').fadeIn();
     }
   })
