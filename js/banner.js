@@ -27,11 +27,9 @@ function addBannerListeners() {
     var creepyOrNot = Math.random();
     if (creepyOrNot < 0.5) {
       $('.photo2').css('background-image', 'url("css/banner/photo2b.gif")')
-      console.log('creepy')
     } else {
       $('.photo2').css('background-image', 'url("css/banner/photo2.gif")')
     }
-    console.log($('.photo2').css('background-image'))
     $('.photo2').animate({
       top: 0
     }, 600, 'easeOutQuad')
@@ -40,6 +38,7 @@ function addBannerListeners() {
   });
 
   $('#vertical-banner').on('click', '.owl', function(e) {
+    logEvent($(this))
     retractPhotos();
     $('.photo3').animate({
       top: 0
@@ -63,21 +62,27 @@ function addBannerListeners() {
     $('.photo5').animate({
       top: 0
     }, 600, 'easeOutQuad')
-    setRemoveOverlay($('.photo6'), 10000, 420);
+    setRemoveOverlay($('.photo5'), 10000, 420);
     return false;
   });
 
   $('#vertical-banner').on('click', '.cage', function(e) {
     retractPhotos();
+    $('.photo6').css('background-image', 'url("css/banner/photo6.gif")')
     $('.photo6').animate({
       top: 0
     }, 600, 'easeOutQuad')
-    setRemoveOverlay($('.photo7'), 7000, 420);
+    setRemoveOverlay($('.photo6'), 7000, 420);
     return false;
   });
 
   $('#vertical-banner').on('click', '.fish', function(e) {
-    console.log('secret 1!');
+    retractPhotos();
+    $('.fish-secret').css('background-image', 'url("css/banner/secret-1.jpg")')
+    $('.fish-secret').animate({
+      top: 200
+    }, 600, 'easeOutQuad')
+    setRemoveOverlay($('.fish-secret'), 5000, 420);
     return false;
   });
 
@@ -89,8 +94,25 @@ function addBannerListeners() {
     return false;
   });
 
+  $('#vertical-banner').on('click', '.photo4', function(e) {
+    retractPhotos();
+    if (e.pageY < 250 && e.pageY > 100 && e.pageX > 100 && e.pageX < 170) {
+      $('.pour-secret').css('background-image', 'url("css/banner/secret-3.jpg")')
+      $('.pour-secret').animate({
+        top: 200
+      }, 600, 'easeOutQuad')
+      setRemoveOverlay($('.pour-secret'), 5000, 420);
+    }
+    return false;
+  })
+
   $('#vertical-banner').on('click', '.treehole', function(e) {
-    console.log('secret 2!');
+    retractPhotos();
+    $('.tree-secret').css('background-image', 'url("css/banner/secret-2.jpg")')
+    $('.tree-secret').stop().animate({
+      top: 200
+    }, 600, 'easeOutQuad')
+    setRemoveOverlay($('.tree-secret'), 5000, 420);
     return false;
   });
 
@@ -100,7 +122,6 @@ function addBannerListeners() {
 
   $('#vertical-banner').on('click', function(e) {
     retractPhotos();
-    console.log(gameOnline);
     if (e.pageY > 643 && e.pageY < 681 && gameOnline) {
       $('.cups-container').fadeIn();
     }
@@ -130,6 +151,26 @@ function retractPhotos() {
   }
   if ($('.photo5').css('top') != 800) {
     $('.photo5').animate({
+      top: 800
+    }, 200, 'easeInQuad')
+  }
+  if ($('.photo6').css('top') != 800) {
+    $('.photo6').animate({
+      top: 800
+    }, 200, 'easeInQuad')
+  }
+  if ($('.fish-secret').css('top') != 800) {
+    $('.fish-secret').animate({
+      top: 800
+    }, 200, 'easeInQuad')
+  }
+  if ($('.tree-secret').css('top') != 800) {
+    $('.tree-secret').animate({
+      top: 800
+    }, 200, 'easeInQuad')
+  }
+  if ($('.pour-secret').css('top') != 800) {
+    $('.pour-secret').animate({
       top: 800
     }, 200, 'easeInQuad')
   }

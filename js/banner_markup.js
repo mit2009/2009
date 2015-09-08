@@ -91,4 +91,8 @@ var banner_markup = '<div class="vertical-background-top"></div> \
       <div class="close-msg"> \
         close \
       </div> \
-    </div>';
+    </div>\
+    <div class="photo6"></div> \
+    <div class="fish-secret"></div> \
+    <div class="tree-secret"></div> \
+    <div class="pour-secret"></div>';

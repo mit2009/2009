@@ -129,6 +129,62 @@
   left: 0px;
 }
 
+.photo6 {
+  width: 200px;
+  height: 820px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 800px;
+  left: 0px;
+}
+
+
+.fish-secret {
+  width: 200px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 800px;
+  left: -20px;
+  transform: rotate(7deg);
+  -webkit-transform: rotate(7deg);
+  border: 10px solid #fff;
+  -webkit-box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.4);
+  box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.4);
+}
+
+.tree-secret {
+  width: 200px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 800px;
+  left: -10px;
+  transform: rotate(-7deg);
+  -webkit-transform: rotate(-7deg);
+  border: 10px solid #fff;
+  -webkit-box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.4);
+  box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.4);
+}
+
+.pour-secret {
+  width: 200px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 800px;
+  left: -10px;
+  transform: rotate(-7deg);
+  -webkit-transform: rotate(-7deg);
+  border: 10px solid #fff;
+  -webkit-box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.4);
+  box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.4);
+}
+
 .cloud1 {
   top: 20px;
   animation-delay: -6s;
